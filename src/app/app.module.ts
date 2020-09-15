@@ -10,6 +10,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon'
@@ -35,6 +36,7 @@ import { ContactComponent } from './contact/contact.component';
     NgbModule,
     MatButtonModule,
     MatButtonToggleModule,
+    MatCardModule,
     MatGridListModule,
     MatSidenavModule,
     MatToolbarModule,

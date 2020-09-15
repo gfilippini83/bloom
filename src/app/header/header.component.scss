@@ -23,3 +23,7 @@ button{
     font-size: 200%;
     text-align: center;
 }
+
+#main::-webkit-scrollbar{
+        display: none;
+}

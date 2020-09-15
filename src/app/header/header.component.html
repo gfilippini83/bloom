@@ -21,15 +21,16 @@
       <mat-icon>share</mat-icon>
     </button>
   </mat-toolbar>
-  <mat-sidenav-container fxFlexFill class="example-container">
-    <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
+  <mat-sidenav-container style="height: 100%; width: 100%; margin: 0;"fxFlexFill class="example-container">
+    <mat-sidenav style="height: 100%; width: 100%; margin: 0;" color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
       <div fxLayout="column">
-        <a mat-button routerLink="/streamers">Streamers</a>
-        <a mat-button routerLink="/about-us">About us</a>
-        <a mat-button routerLink="/contact">Contact</a>
+        <a mat-button routerLink="/streamers" (click)="sidenav.toggle()">Streamers</a>
+        <a mat-button routerLink="/about-us" (click)="sidenav.toggle()">About us</a>
+        <a mat-button routerLink="/contact" (click)="sidenav.toggle()">Contact</a>
+        <a mat-button routerLink="/" (click)="sidenav.toggle()">Home</a>
       </div>
     </mat-sidenav>
-    <mat-sidenav-content fxFlexFill>
+    <mat-sidenav-content fxFlexFill id="main">
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
