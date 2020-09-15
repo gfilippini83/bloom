@@ -1,0 +1,95 @@
+
+<!--Carousel Wrapper-->
+<mdb-carousel  [isControls]="false" class="carousel slide" [animation]="'slide'">
+    <!--First slide-->
+    <mdb-slide>
+        <!--Mask color-->
+        <div id="videoContainer" class="view">
+            <!--Video source-->
+            <video  class="video-fluid" muted autoplay loop>
+                <source style="margin-bottom: 400px;" src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4" />
+            </video>
+            <div class="mask rgba-indigo-light waves-light" mdbWavesEffect></div>
+        </div>
+        <!--Caption-->
+        <!-- <div class="carousel-caption">
+            <div class="animated fadeInDown">
+                <h3 class="h3-responsive">Light mask</h3>
+                <p>First text</p>
+            </div>
+        </div> -->
+        <!--Caption-->
+    </mdb-slide>
+    <!--/First slide-->
+    <!--Second slide-->
+    <mdb-slide>
+        <!--Mask color-->
+        <div id="videoContainer2"  class="view">
+            <!--Video source-->
+            <video class="video-fluid" muted autoplay loop>
+                <source src="https://mdbootstrap.com/img/video/animation-intro.mp4" type="video/mp4" />
+            </video>
+            <div class="mask rgba-purple-slight waves-light" mdbWavesEffect></div>
+        </div>
+
+        <!--Caption-->
+        <!-- <div class="carousel-caption">
+            <div class="animated fadeInDown">
+                <h3 class="h3-responsive">Super light mask</h3>
+                <p>Secondary text</p>
+            </div>
+        </div> -->
+        <!--Caption-->
+    </mdb-slide>
+    <!--/Second slide-->
+    <!--Third slide-->
+    <mdb-slide>
+        <!--Mask color-->
+        <div id="videoContainer3" class="view">
+            <!--Video source-->
+            <video class="video-fluid" muted autoplay loop>
+                <source style="padding-bottom: 400px;" src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4" />
+            </video>
+            <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+        </div>
+
+        <!--Caption-->
+        <!-- <div class="carousel-caption">
+            <div class="animated fadeInDown">
+                <h3 class="h3-responsive">Strong mask</h3>
+                <p>Third text</p>
+            </div>
+        </div> -->
+        <!--Caption-->
+    </mdb-slide>
+    <!--/Third slide-->
+</mdb-carousel>
+<!--Carousel Wrapper-->
+<div class="container">
+<mat-grid-list [cols]="breakpoint" rowHeight="2:1" (window:resize)="onResize($event)">
+    <mat-grid-tile
+        *ngFor="let tile of tiles"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.background]="tile.color"
+        [style.font-family]="tile.fontfamily"
+        [style.font-size]="tile.size"
+        [style.color]= "tile.textColor">
+    {{tile.text}}
+    </mat-grid-tile>
+</mat-grid-list>
+<br>
+</div>
+<mat-grid-list [cols]="breakpoint2" rowHeight="4:1" style="background: #137CA9;">
+    <mat-grid-tile
+        *ngFor="let tile of tiles2"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.font-family]="tile.fontfamily"
+        [style.font-size]="tile.size"
+        [style.color]= "tile.textColor">
+    {{tile.text}}
+    </mat-grid-tile>
+</mat-grid-list>
+<br>
+                            
