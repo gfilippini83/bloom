@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -15,21 +14,17 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './header/header.component';
-import { StreamerComponent } from './streamer/streamer.component';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { ContactComponent } from './contact/contact.component';
+
+import { AppComponentModule } from './app-components/app-components.module'
+import { BloomService } from './services/bloom.service';
+import { HttpClient, HttpHandler } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DashboardComponent,
-    HeaderComponent,
-    StreamerComponent,
-    AboutUsComponent,
-    ContactComponent
+    AppComponent
   ],
   imports: [
+    AppComponentModule,
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,
@@ -44,7 +39,10 @@ import { ContactComponent } from './contact/contact.component';
     MDBBootstrapModule.forRoot(),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    BloomService,
+    HttpClient
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

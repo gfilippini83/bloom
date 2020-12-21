@@ -1,0 +1,35 @@
+<!-- <img *ngIf='streamer.banner != null' [src]="streamer.banner"/> -->
+<!-- <img *ngIf='streamer.banner == null' [src]='defaultBanner'/> -->
+<mdb-card style="background-image: url({{defaultBanner}})">
+    <div class="text-white text-center py-5 px-4 my-5">
+      <div>
+        <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Welcome to {{streamer.streamer_name}}'s Space</strong></h2>
+        <p class="double"> 
+          {{streamer.bio}}
+        </p>
+        <div *ngFor="let link of streamer.links | keyvalue" style="display: inline;">
+          <a *ngIf="link.value !== null && link.key === 'youtube'" [href]="link.value" mdbBtn color="white" outline="true" class="waves-light" mdbWavesEffect>
+            <mdb-icon fab icon="youtube"></mdb-icon> {{link.key}}
+          </a>
+          <a *ngIf="link.value !== null && link.key === 'twitch'" [href]="link.value" mdbBtn color="white" outline="true" class="waves-light" mdbWavesEffect>
+            <mdb-icon fab icon="twitch" class="left"></mdb-icon> {{link.key}}
+          </a>
+          <a *ngIf="link.value !== null && link.key === 'twitter'" [href]="link.value" mdbBtn color="white" outline="true" class="waves-light" mdbWavesEffect>
+            <mdb-icon fab icon="twitter"></mdb-icon> {{link.key}}
+          </a>
+          <a *ngIf="link.value !== null && link.key === 'instagram'" [href]="link.value" mdbBtn color="white" outline="true" class="waves-light" mdbWavesEffect>
+            <mdb-icon fab icon="instagram" class="left"></mdb-icon> {{link.key}}
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </mdb-card>
+
+  <mat-grid-list [cols]="5" rowHeight="1.5:1" (window:resize)="onResize($event)">
+    <mat-grid-tile
+        colspan="2"
+        rowspan="2">
+    <img [src]="streamer.image" style="max-height:300px; width:auto; border-radius: 100px;">
+    </mat-grid-tile>
+</mat-grid-list>

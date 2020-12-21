@@ -1,0 +1,98 @@
+
+<mdb-carousel  [isControls]="false" class="carousel slide" [animation]="'slide'">
+    <mdb-slide>
+        <div id="videoContainer" class="view">
+            <video  class="video-fluid" muted autoplay loop>
+                <source style="margin-bottom: 400px;" src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4" />
+            </video>
+            <div class="mask rgba-indigo-light waves-light" mdbWavesEffect></div>
+        </div>
+    </mdb-slide>
+    <mdb-slide>
+        <div id="videoContainer2"  class="view">
+            <video class="video-fluid" muted autoplay loop>
+                <source src="https://mdbootstrap.com/img/video/animation-intro.mp4" type="video/mp4" />
+            </video>
+            <div class="mask rgba-purple-slight waves-light" mdbWavesEffect></div>
+        </div>
+    </mdb-slide>
+    <mdb-slide>
+        <div id="videoContainer3" class="view">
+            <video class="video-fluid" muted autoplay loop>
+                <source style="padding-bottom: 400px;" src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4" />
+            </video>
+            <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+        </div>
+    </mdb-slide>
+</mdb-carousel>
+
+
+<div class="container">
+    <br>
+<!-- <mat-grid-list [cols]="breakpoint" rowHeight="1:1"  (window:resize)="onResize($event)">
+    <mat-grid-tile
+        *ngFor="let tile of tiles"
+        style="font-weight: 400;text-align: left;"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.background]="tile.color"
+        [style.font-family]="tile.fontfamily"
+        [style.font-size]="tile.size"
+        [style.color]= "tile.textColor"
+        [style.font-weight]="tile.font-weight">
+    {{tile.text}}
+    </mat-grid-tile>
+</mat-grid-list> -->
+
+<div 
+  gdAreas="header header header | side content content | content2 content2 side2 | footer footer footer | footer-content footer-content footer-content"
+  gdGap="16px"
+  gdRows="auto auto auto"
+  gdAreas.lt-md="header header header | side content content | content2 content2 side2 | footer footer footer"
+  >
+  <div gdArea="header">
+    Stream Bloom Management!
+   </div>
+   <br>
+   <br>
+  <div gdArea="side">
+    <p>Your Support</p><br><p>Team</p>
+   </div>
+  <div gdArea="content">
+        <div class="container" style="line-height: 2; font-size: 15px">
+            We make sh*t happen. The background which allows you to focus on gaming and being the best at your sport. We are driven to make your dreams become a reality. What is it that you want? 
+        </div>
+  </div>
+  <div gdArea="content2">
+    <div class="container" style="line-height: 2; font-size: 15px">
+        We are goal seekers. Here to build the best partnership experiences on a variety of platforms. ROIs are meant to be shattered in this industry and we are here to offer you the best return, in the shortest time. 
+   </div>
+</div>
+  <div gdArea="side2">
+    <p>Our Winning</p><br><p>Philosophy</p>
+  </div>
+  <div gdArea="footer">
+    Our Story
+  </div>
+  <div gdArea="footer-content">
+    <div class="container" style="line-height: 2; font-size: 15px;">
+        A team of the best and brightest talent in the Esports and streaming industry. Our objective is to build longstanding relationships with companies that align with each member of team Bloom for partnerships that make sense. The streaming industry can feel over saturated, which takes the fun out of gaming. We are here to change that and we value our members, partners, and viewers to make for the greatest online streaming experience.
+   </div>
+</div>
+  
+</div>
+<br>
+</div>
+<mat-grid-list [cols]="breakpoint2" rowHeight="4:1" style="background: #137CA9;"(window:resize)="onResize($event)">
+    <mat-grid-tile
+        *ngFor="let tile of tilesSecondary"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.font-family]="tile.fontfamily"
+        [style.font-size]="tile.size"
+        [style.color]= "tile.textColor">
+    {{tile.text}}
+    </mat-grid-tile>
+</mat-grid-list>
+<br>
+                            

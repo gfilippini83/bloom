@@ -1,6 +1,8 @@
 runtime: python27
 api_version: 1
 threadsafe: true
+manual_scaling:
+  instances: 1
 handlers:
 - url: /
   static_files: dist/bloom/index.html
@@ -10,7 +12,6 @@ handlers:
 skip_files:
   - e2e/
   - node_modules/
-  - src/
   - coverage
   - ^(.*/)?\..*$
   - ^(.*/)?.*\.json$
